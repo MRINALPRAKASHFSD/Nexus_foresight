@@ -1,0 +1,242 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top right, var(--bg-card), var(--bg-dark) 60%);
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 440px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: floatIn 0.8s ease-out;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-logo {
+  margin-bottom: 32px;
+}
+
+.logo-icon-large {
+  color: var(--accent-primary);
+  filter: drop-shadow(0 0 12px var(--accent-glow));
+  margin-bottom: 16px;
+}
+
+.login-logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.login-logo .subtitle {
+  color: var(--accent-primary);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.login-prompt {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.oauth-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+/* Custom Google Button Styles */
+.demo-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #202124;
+  color: #fff;
+  border: 1px solid #3c4043;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Roboto', 'Inter', sans-serif;
+  letter-spacing: 0.25px;
+}
+
+.demo-google-btn:hover {
+  background-color: #171717;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.login-footer {
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding-top: 24px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Google Simulator Modal */
+.simulator-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.simulator-modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #5f6368;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.simulator-header h2 {
+  font-family: "Google Sans", arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #202124;
+  margin: 16px 0 8px;
+}
+
+.simulator-header p {
+  color: #202124;
+  font-size: 16px;
+  font-family: "Roboto", arial, sans-serif;
+  margin-bottom: 32px;
+}
+
+.simulator-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #202124;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border: 2px solid #1a73e8;
+  padding: 12px 14px;
+}
+
+.forgot-text {
+  color: #1a73e8;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 48px;
+}
+
+.account-badge {
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  padding: 6px 12px;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: #3c4043;
+  font-weight: 500;
+}
+
+.simulator-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.create-account {
+  color: #1a73e8;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.next-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.next-btn:hover {
+  background-color: #1557b0;
+}
